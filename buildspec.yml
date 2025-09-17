@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18 # not required, but future-ready
+    commands:
+      - echo Installing dependencies...
+      - apt-get update -y
+      - apt-get install -y unzip
+
+  pre_build:
+    commands:
+      - echo Pre-build stage: nothing to do here
+
+  build:
+    commands:
+      - echo Build started...
+      - mkdir -p build
+      - cp -r index.html style.css build/
+      - echo Build completed
+
+  post_build:
+    commands:
+      - echo Build phase complete
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build
