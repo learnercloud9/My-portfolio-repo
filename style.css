@@ -145,9 +145,41 @@ section h2 {
   justify-content: center;
   font-weight: bold;
   background: #eee;
-  color: #0d47a1;
   font-size: 1rem;
   transition: all 0.5s ease-in-out;
+  color: initial; /* ya hata do agar koi color override nahi karna */
+}
+
+.skill-circle i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  vertical-align: middle;
+  color: #0d47a1; /* icons ko ek color de sakte ho */
+}
+
+/* Ab skill text ke alag colors: */
+.skill-circle .skill-text {
+  color: black; /* default agar chahiye */
+}
+
+.skill-circle[data-skill="AWS"] .skill-text {
+  color: #FF9900; /* AWS orange */
+}
+
+.skill-circle[data-skill="Azure"] .skill-text {
+  color: #0078D7; /* Azure blue */
+}
+
+.skill-circle[data-skill="Docker"] .skill-text {
+  color: #2496ED; /* Docker blue */
+}
+
+.skill-circle[data-skill="Python"] .skill-text {
+  color: #306998; /* Python blue */
+}
+
+.skill-circle[data-skill="Networking"] .skill-text {
+  color: #28A745; /* Green */
 }
 
 /* Experience */
