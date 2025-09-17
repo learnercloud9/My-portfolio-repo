@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18 # not required, but future-ready
+      nodejs: 18
     commands:
       - echo Installing dependencies...
       - apt-get update -y
@@ -23,6 +23,7 @@ phases:
   post_build:
     commands:
       - echo Build phase complete
+
 artifacts:
   files:
     - '**/*'
