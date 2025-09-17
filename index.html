@@ -7,8 +7,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header -->
   <header>
     <div class="container">
+      <img src="profile.jpg" alt="Mukul Kumar Sharma" class="profile-pic"/>
       <h1>Mukul Kumar Sharma</h1>
       <p>Cloud Engineer</p>
       <p class="location">Vill-Rajour, Anupshahr, Bulandshahr, Uttar Pradesh - 202390</p>
@@ -18,10 +30,12 @@
         <a href="https://github.com/learnercloud9" target="_blank">GitHub</a>
         <a href="tel:+919536490912">Call</a>
       </div>
+      <a href="resume.pdf" class="btn" download>Download Resume</a>
     </div>
   </header>
 
-  <section class="about">
+  <!-- About Section -->
+  <section class="about" id="about">
     <div class="container">
       <h2>Career Objective</h2>
       <p>
@@ -30,20 +44,37 @@
     </div>
   </section>
 
-  <section class="skills">
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
     <div class="container">
       <h2>Technical Skills</h2>
       <div class="grid">
-        <div><strong>Cloud Platforms:</strong> AWS, Azure</div>
-        <div><strong>DevOps Tools:</strong> Git, GitHub Actions, Docker, CloudFormation</div>
-        <div><strong>Programming:</strong> Python, REST APIs, Boto3</div>
-        <div><strong>SysAdmin:</strong> Linux (permissions, SSH, packages)</div>
-        <div><strong>Networking:</strong> VPC, Load Balancing, DNS, VPN</div>
+        <div class="skill">
+          <p>AWS</p>
+          <div class="bar"><div class="progress" style="width:90%"></div></div>
+        </div>
+        <div class="skill">
+          <p>Azure</p>
+          <div class="bar"><div class="progress" style="width:75%"></div></div>
+        </div>
+        <div class="skill">
+          <p>Docker & GitHub Actions</p>
+          <div class="bar"><div class="progress" style="width:85%"></div></div>
+        </div>
+        <div class="skill">
+          <p>Python & Boto3</p>
+          <div class="bar"><div class="progress" style="width:80%"></div></div>
+        </div>
+        <div class="skill">
+          <p>Linux & Networking</p>
+          <div class="bar"><div class="progress" style="width:85%"></div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="experience">
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
     <div class="container">
       <h2>Experience</h2>
       <p><strong>Tasshee Linux Services Pvt. Ltd. – AWS Cloud Intern</strong> (Sep 2024 – Present)</p>
@@ -55,7 +86,8 @@
     </div>
   </section>
 
-  <section class="education">
+  <!-- Education Section -->
+  <section class="education" id="education">
     <div class="container">
       <h2>Education</h2>
       <ul>
@@ -67,21 +99,25 @@
     </div>
   </section>
 
-  <section class="projects">
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
     <div class="container">
       <h2>Projects</h2>
-      <div class="project">
+      <div class="project-card">
         <h3>CI/CD Pipeline on AWS</h3>
-        <p>Built using GitHub Actions & AWS CodeDeploy. Automated blue/green deployments with Docker and custom scripts.</p>
+        <p>Automated deployments using AWS and GitHub Actions.</p>
+        <a href="https://github.com/learnercloud9" target="_blank">View Code</a>
       </div>
-      <div class="project">
+      <div class="project-card">
         <h3>Three-Tier App on AWS</h3>
-        <p>Deployed frontend/backend on EC2, database on RDS, secured with VPC and ALB. High availability architecture.</p>
+        <p>Frontend/backend on EC2, database on RDS, secured with VPC & ALB.</p>
+        <a href="https://github.com/learnercloud9" target="_blank">View Code</a>
       </div>
     </div>
   </section>
 
-  <section class="contact">
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:mukulkumarsharma8@gmail.com">mukulkumarsharma8@gmail.com</a></p>
@@ -94,5 +130,6 @@
   <footer>
     <p>© 2025 Mukul Kumar Sharma</p>
   </footer>
+
 </body>
 </html>
