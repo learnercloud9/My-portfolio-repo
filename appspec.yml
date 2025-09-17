@@ -1,12 +1,1 @@
-version: 0.0
-os: linux
 
-files:
-  - source: /
-    destination: /var/www/portfolio
-
-hooks:
-  BeforeInstall:
-    - location: scripts/cleanup.sh
-  AfterInstall:
-    - location: scripts/deploy.sh
