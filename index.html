@@ -8,15 +8,18 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- AOS library for scroll animations -->
+  <!-- AOS library -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-  <!-- Typed.js library for typing effect -->
+  <!-- Typed.js -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
 
-  <!-- Sticky Navbar -->
+  <!-- Navbar -->
   <nav class="navbar">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -25,23 +28,23 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Header -->
-  <header>
+  <!-- Hero Section -->
+  <header class="hero">
     <div class="container">
       <img src="profile.jpg" alt="Mukul Kumar Sharma" class="profile-pic"/>
       <h1 id="typed"></h1>
       <p class="location">Vill-Rajour, Anupshahr, Bulandshahr, Uttar Pradesh - 202390</p>
       <div class="contact-links">
-        <a href="mailto:mukulkumarsharma8@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/mukul-sharma-693810217" target="_blank">LinkedIn</a>
-        <a href="https://github.com/learnercloud9" target="_blank">GitHub</a>
-        <a href="tel:+919536490912">Call</a>
+        <a href="mailto:mukulkumarsharma8@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://linkedin.com/in/mukul-sharma-693810217" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/learnercloud9" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="tel:+919536490912"><i class="fas fa-phone"></i> Call</a>
       </div>
-      <a href="resume.pdf" class="btn" download>Download Resume</a>
+      <a href="resume.pdf" class="btn">Download Resume</a>
     </div>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <section class="about" id="about" data-aos="fade-up">
     <div class="container">
       <h2>Career Objective</h2>
@@ -51,68 +54,41 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section class="skills" id="skills" data-aos="fade-up">
     <div class="container">
       <h2>Technical Skills</h2>
-      <div class="grid">
-        <div class="skill">
-          <p>AWS</p>
-          <div class="bar"><div class="progress" data-width="90%"></div></div>
-        </div>
-        <div class="skill">
-          <p>Azure</p>
-          <div class="bar"><div class="progress" data-width="75%"></div></div>
-        </div>
-        <div class="skill">
-          <p>Docker & GitHub Actions</p>
-          <div class="bar"><div class="progress" data-width="85%"></div></div>
-        </div>
-        <div class="skill">
-          <p>Python & Boto3</p>
-          <div class="bar"><div class="progress" data-width="80%"></div></div>
-        </div>
-        <div class="skill">
-          <p>Linux & Networking</p>
-          <div class="bar"><div class="progress" data-width="85%"></div></div>
+      <div class="skills-grid">
+        <div class="skill-circle" data-skill="AWS" data-percent="90">AWS</div>
+        <div class="skill-circle" data-skill="Azure" data-percent="75">Azure</div>
+        <div class="skill-circle" data-skill="Docker" data-percent="85">Docker</div>
+        <div class="skill-circle" data-skill="Python" data-percent="80">Python</div>
+        <div class="skill-circle" data-skill="Networking" data-percent="85">Networking</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" id="experience" data-aos="fade-up">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>AWS Cloud Intern</h3>
+          <span>Sep 2024 – Present | Tasshee Linux Services Pvt. Ltd.</span>
+          <p>Managed EC2, S3, IAM, RDS, ELB, Auto Scaling & CloudWatch alerts. Wrote Python scripts for monitoring and automation. Designed secure VPC architectures with NAT, NACLs, and Route Tables.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section class="experience" id="experience" data-aos="fade-up">
-    <div class="container">
-      <h2>Experience</h2>
-      <p><strong>Tasshee Linux Services Pvt. Ltd. – AWS Cloud Intern</strong> (Sep 2024 – Present)</p>
-      <ul>
-        <li>Managed EC2, S3, IAM, RDS, ELB, Auto Scaling & CloudWatch alerts</li>
-        <li>Wrote Python scripts for monitoring and automation</li>
-        <li>Designed secure VPC architectures with NAT, NACLs, and Route Tables</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section class="education" id="education" data-aos="fade-up">
-    <div class="container">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Jaypee University</strong> – B.Tech CSE, CGPA: 7.1 (2021–2025)</li>
-        <li><strong>CCS University</strong> – BSc PCM, 47.75% (2016–2019)</li>
-        <li><strong>U.P. Board</strong> – 12th: 69% (2016)</li>
-        <li><strong>U.P. Board</strong> – 10th: 78% (2014)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section class="projects" id="projects" data-aos="fade-up">
     <div class="container">
       <h2>Projects</h2>
       <div class="project-card">
         <h3>CI/CD Pipeline on AWS</h3>
-        <p>Automated deployments using AWS and GitHub Actions.</p>
+        <p>Automated deployments using GitHub Actions & AWS CodeDeploy.</p>
         <a href="https://github.com/learnercloud9" target="_blank">View Code</a>
       </div>
       <div class="project-card">
@@ -123,7 +99,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section class="contact" id="contact" data-aos="fade-up">
     <div class="container">
       <h2>Contact</h2>
@@ -135,16 +111,24 @@
   </section>
 
   <footer>
-    <p>© 2025 Mukul Kumar Sharma</p>
+    <div class="footer-container">
+      <div>© 2025 Mukul Kumar Sharma</div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </footer>
 
-  <!-- JS Libraries -->
+  <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
   </script>
 
-  <!-- Typing Effect -->
   <script>
     var typed = new Typed('#typed', {
       strings: ["Mukul Kumar Sharma", "Cloud Engineer", "AWS Enthusiast"],
@@ -152,29 +136,23 @@
       backSpeed: 50,
       loop: true
     });
-  </script>
 
-  <!-- Smooth Scroll -->
-  <script>
+    // Smooth Scroll
     document.querySelectorAll('.navbar a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
     });
-  </script>
 
-  <!-- Skills Progress Animation -->
-  <script>
+    // Skills Circular Charts
+    const circles = document.querySelectorAll('.skill-circle');
     window.addEventListener('scroll', () => {
-      const skills = document.querySelectorAll('.progress');
-      skills.forEach(skill => {
-        const skillTop = skill.getBoundingClientRect().top;
+      circles.forEach(circle => {
+        const top = circle.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        if(skillTop < windowHeight - 50) {
-          skill.style.width = skill.getAttribute('data-width');
+        if (top < windowHeight - 50) {
+          circle.style.background = `conic-gradient(#0d47a1 ${circle.dataset.percent}%, #eee 0%)`;
         }
       });
     });
@@ -182,3 +160,4 @@
 
 </body>
 </html>
+
