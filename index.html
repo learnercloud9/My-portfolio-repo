@@ -4,7 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mukul Kumar Sharma | Cloud Engineer</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS library for scroll animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Typed.js library for typing effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
 </head>
 <body>
 
@@ -21,9 +29,8 @@
   <header>
     <div class="container">
       <img src="profile.jpg" alt="Mukul Kumar Sharma" class="profile-pic"/>
-      <h1>Mukul Kumar Sharma</h1>
-      <p>Cloud Engineer</p>
-      <p class="location">Vill-Rajour, Anupshahr, Bulandshahr, Uttar Pradesh - 202490</p>
+      <h1 id="typed"></h1>
+      <p class="location">Vill-Rajour, Anupshahr, Bulandshahr, Uttar Pradesh - 202390</p>
       <div class="contact-links">
         <a href="mailto:mukulkumarsharma8@gmail.com">Email</a>
         <a href="https://linkedin.com/in/mukul-sharma-693810217" target="_blank">LinkedIn</a>
@@ -35,46 +42,46 @@
   </header>
 
   <!-- About Section -->
-  <section class="about" id="about">
+  <section class="about" id="about" data-aos="fade-up">
     <div class="container">
       <h2>Career Objective</h2>
       <p>
-        Aspiring Cloud Engineer with hands-on experience in AWS cloud environments, strong foundation in Linux, containerization and scripting. Eager to build scalable cloud solutions.
+        Aspiring Cloud Engineer with hands-on experience in AWS cloud environments, strong foundation in Linux, containerization, and scripting. Eager to build scalable cloud solutions.
       </p>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section class="skills" id="skills">
+  <section class="skills" id="skills" data-aos="fade-up">
     <div class="container">
       <h2>Technical Skills</h2>
       <div class="grid">
         <div class="skill">
           <p>AWS</p>
-          <div class="bar"><div class="progress" style="width:90%"></div></div>
+          <div class="bar"><div class="progress" data-width="90%"></div></div>
         </div>
         <div class="skill">
           <p>Azure</p>
-          <div class="bar"><div class="progress" style="width:75%"></div></div>
+          <div class="bar"><div class="progress" data-width="75%"></div></div>
         </div>
         <div class="skill">
           <p>Docker & GitHub Actions</p>
-          <div class="bar"><div class="progress" style="width:85%"></div></div>
+          <div class="bar"><div class="progress" data-width="85%"></div></div>
         </div>
         <div class="skill">
           <p>Python & Boto3</p>
-          <div class="bar"><div class="progress" style="width:80%"></div></div>
+          <div class="bar"><div class="progress" data-width="80%"></div></div>
         </div>
         <div class="skill">
           <p>Linux & Networking</p>
-          <div class="bar"><div class="progress" style="width:85%"></div></div>
+          <div class="bar"><div class="progress" data-width="85%"></div></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section class="experience" id="experience">
+  <section class="experience" id="experience" data-aos="fade-up">
     <div class="container">
       <h2>Experience</h2>
       <p><strong>Tasshee Linux Services Pvt. Ltd. – AWS Cloud Intern</strong> (Sep 2024 – Present)</p>
@@ -87,7 +94,7 @@
   </section>
 
   <!-- Education Section -->
-  <section class="education" id="education">
+  <section class="education" id="education" data-aos="fade-up">
     <div class="container">
       <h2>Education</h2>
       <ul>
@@ -100,7 +107,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section class="projects" id="projects">
+  <section class="projects" id="projects" data-aos="fade-up">
     <div class="container">
       <h2>Projects</h2>
       <div class="project-card">
@@ -111,13 +118,13 @@
       <div class="project-card">
         <h3>Three-Tier App on AWS</h3>
         <p>Frontend/backend on EC2, database on RDS, secured with VPC & ALB.</p>
-        <a href="https://github.com/learnercloud9/three-tier-aws-deployment.git" target="_blank">View Code</a>
+        <a href="https://github.com/learnercloud9" target="_blank">View Code</a>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
+  <section class="contact" id="contact" data-aos="fade-up">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:mukulkumarsharma8@gmail.com">mukulkumarsharma8@gmail.com</a></p>
@@ -130,6 +137,48 @@
   <footer>
     <p>© 2025 Mukul Kumar Sharma</p>
   </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+  <!-- Typing Effect -->
+  <script>
+    var typed = new Typed('#typed', {
+      strings: ["Mukul Kumar Sharma", "Cloud Engineer", "AWS Enthusiast"],
+      typeSpeed: 80,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+
+  <!-- Smooth Scroll -->
+  <script>
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <!-- Skills Progress Animation -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const skills = document.querySelectorAll('.progress');
+      skills.forEach(skill => {
+        const skillTop = skill.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if(skillTop < windowHeight - 50) {
+          skill.style.width = skill.getAttribute('data-width');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
