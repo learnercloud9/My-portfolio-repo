@@ -2,14 +2,29 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 18
     commands:
-      - echo "Installing dependencies..."
+      - echo Installing dependencies...
+      - apt-get update -y
+      - apt-get install -y unzip
+
+  pre_build:
+    commands:
+      - echo Pre-build stage: nothing to do here
+
   build:
     commands:
-      - echo "Build stage running..."
+      - echo Build started...
+      - mkdir -p build
+      - cp -r index.html style.css build/
+      - echo Build completed
+
   post_build:
     commands:
-      - echo "Build completed!"
+      - echo Build phase complete
+
 artifacts:
   files:
     - '**/*'
+  base-directory: build
